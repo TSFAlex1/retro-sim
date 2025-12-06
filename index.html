@@ -1,35 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Download — Setup Installer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro-Sim Installer</title>
+
 <style>
-body{margin:0;background:#0d1117;font-family:Arial;color:#e6eef8;display:flex;justify-content:center;align-items:center;height:100vh}
-.container{background:#161b22;padding:32px;border-radius:14px;box-shadow:0 0 25px rgba(0,0,0,0.5);width:420px;text-align:center}
-h1{margin:0 0 10px;font-size:22px}
-p{color:#8b9bb5;margin:4px 0 22px}
-.download-box{background:#1c2128;padding:20px;border-radius:12px;border:1px solid #262c36}
-.file{font-size:15px;margin-bottom:8px}
-.btn{display:inline-block;padding:12px 18px;margin-top:10px;border-radius:10px;font-weight:bold;text-decoration:none;background:#238636;color:white}
-.btn:hover{background:#2ea043}
-.small{font-size:13px;color:#8b9bb5;margin-top:14px}
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to bottom right, #0a0f1f, #1e325c, #0e1b33);
+        color: #fff;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 60px 20px;
+        font-size: 52px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(6px);
+    }
+
+    .section {
+        margin-top: 50px;
+    }
+
+    .download-box {
+        margin: auto;
+        margin-top: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px;
+        border-radius: 14px;
+        width: clamp(300px, 50%, 700px);
+        box-shadow: 0 0 30px rgba(0,0,0,0.4);
+        animation: fade 1.5s ease;
+    }
+
+    .btn {
+        display: block;
+        margin: 18px auto;
+        padding: 16px 38px;
+        width: 260px;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: 0.25s ease;
+        border: 2px solid rgba(255,255,255,0.3);
+        backdrop-filter: blur(4px);
+    }
+
+    .btn-download {
+        background: #34d058;
+        color:#000;
+    }
+    .btn-download:hover {
+        background:#4ff56e;
+        transform: scale(1.05);
+    }
+
+    .btn-source {
+        background: transparent;
+        color:#fff;
+    }
+    .btn-source:hover {
+        background: rgba(255,255,255,0.1);
+        transform: scale(1.05);
+    }
+
+    footer {
+        margin-top: 60px;
+        padding: 20px;
+        opacity: 0.8;
+        font-size: 14px;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; translate:0 10px; }
+        to   { opacity: 1; translate:0 0; }
+    }
 </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Download Setup Installer</h1>
-    <p>Windows 10/11 • Local GitHub Repo File • Hosted on Vercel</p>
+<header>Retro-Sim Installer</header>
 
+<div class="section">
     <div class="download-box">
-        <div class="file">Installer file: <strong>Setup.exe</strong></div>
-        <!-- relative link — works when file is next to index.html -->
-        <a class="btn" href="Setup.exe" download>Download Setup.exe</a>
-    </div>
+        <h2>Download & Install</h2>
+        <p>Click below to download the Windows installer.</p>
 
-    <div class="small">If your browser warns you, click Keep → Open → Install</div>
+        <!-- Make sure Setup.exe is in the same directory -->
+        <a class="btn btn-download" href="Setup.exe" download>Download Setup.exe</a>
+
+        <a class="btn btn-source" href="https://github.com/TSFAlex1/retro-sim" target="_blank">View Source on GitHub</a>
+    </div>
 </div>
+
+<footer>© Retro-Sim</footer>
 
 </body>
 </html>
